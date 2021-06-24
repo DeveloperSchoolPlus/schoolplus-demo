@@ -1,0 +1,36 @@
+//- =========================================================================================
+	File Name: dimple-line-area-chart.jade
+	Description: Dimple line & area chart examples.
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================================-//
+block pageVars
+	- var pageTitle    = "Dimple Line Chart"
+	- var pageSubTitle = "Dimple line chart examples"
+	- var description  = "A line chart or line graph is a type of chart which displays information as a series of data points called 'markers' connected by straight line segments."
+	- var activeMenu   = "dimple-line-area-chart"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Dimple Charts"}, {name:"Line Chart"}])
+
+//- Include page content in page block
+append content
+	include ../contents/dimple-line-area-chart.html
+
+//- Vendor JS
+//------------------------------
+//- Add vendor specific JS
+append vendorjs
+	script(src='../../../app-assets/vendors/js/charts/d3.min.js', type='text/javascript')
+	script(src='../../../app-assets/vendors/js/charts/dimple.min.js', type='text/javascript')
+
+//- Page JS
+//------------------------------
+//- Add custom page specific JS
+append pagejs
+	script(src='../../../app-assets/js/scripts/charts/dimple/line-area.js', type='text/javascript')

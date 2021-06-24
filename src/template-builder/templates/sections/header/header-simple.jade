@@ -1,0 +1,27 @@
+block navbarConfig
+
+// navbar-fixed-top
+nav.header-navbar.navbar.navbar-with-menu(class="#{navbarPosition} #{navbarColor}", class=(navbarHideOnScroll == true ? 'navbar-hide-on-scroll' : ''), class=(navbarBorder == true ? 'navbar-border' : ''), class=(navbarShadow == true ? 'navbar-shadow' : ''), class=(navbarBrandCenter == true ? 'navbar-brand-center' : ''), class=(boxedLayout == true ? 'container boxed-layout' : ''))
+  .navbar-wrapper
+    .navbar-header
+      ul.nav.navbar-nav
+        li.nav-item.mobile-menu.hidden-md-up.float-xs-left
+          a.nav-link.nav-menu-main.menu-toggle.hidden-xs
+              i.icon-menu5.font-large-1
+        li.nav-item
+          a.navbar-brand.nav-link(href='index.html')
+            img(class='brand-logo' alt='branding logo' src=(logoType == 'dark' ? '../../../app-assets/images/logo/robust-logo-dark.png' : '../../../app-assets/images/logo/robust-logo-light.png') data-expand=(logoType == 'dark' ? '../../../app-assets/images/logo/robust-logo-dark.png' : '../../../app-assets/images/logo/robust-logo-light.png') data-collapse='../../../app-assets/images/logo/robust-logo-small.png')
+        li.nav-item.hidden-md-up.float-xs-right
+          a.nav-link.open-navbar-container(data-toggle='collapse', data-target='#navbar-mobile')
+            i.icon-ellipsis.pe-2x.fa-rotate-90
+    .navbar-container.content
+      #navbar-mobile.collapse.navbar-toggleable-sm
+        ul.nav.navbar-nav.float-xs-right
+          li.nav-item
+            a.nav-link.mr-2.nav-link-label(href='index.html')
+              i.ficon.icon-reply4
+          li.dropdown.nav-item
+            a.nav-link.mr-2.nav-link-label(href='#', data-toggle='dropdown')
+              i.ficon.icon-cog3
+
+include includes/fullscreen-search

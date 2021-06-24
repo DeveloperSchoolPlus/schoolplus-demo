@@ -1,0 +1,148 @@
+
+<!-- Full calendar basic example section start -->
+<link rel="stylesheet" href="../../../app-assets/css/plugins/calendars/fullcalendar.css"/>
+<section id="basic-examples">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Default</h4>
+                    <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+                    <div class="heading-elements">
+                        <ul class="list-inline mb-0">
+                            <li><a data-action="collapse"><i class="icon-minus4"></i></a></li>
+                            <li><a data-action="reload"><i class="icon-reload"></i></a></li>
+                            <li><a data-action="close"><i class="icon-cross2"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-body collapse in">
+                    <div class="card-block">
+                        <p class="card-text">This is the most basic example having navigation button to navigate next and previous months and today button. This basic example lists all the events on the calendar.</p>
+                        <div id='fc-default'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Basic Views</h4>
+                    <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+                    <div class="heading-elements">
+                        <ul class="list-inline mb-0">
+                            <li><a data-action="collapse"><i class="icon-minus4"></i></a></li>
+                            <li><a data-action="reload"><i class="icon-reload"></i></a></li>
+                            <li><a data-action="close"><i class="icon-cross2"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-body collapse in">
+                    <div class="card-block">
+                        <p class="card-text">This is the most basic example having navigation buttons as well as month, week and day views. In this example you have the option to change your view to a basicWeek or basicDay view. In the Basic Week or Basic Day View events are listed all together.</p>
+                        <div id='fc-basic-views'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Agenda Views</h4>
+                    <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+                    <div class="heading-elements">
+                        <ul class="list-inline mb-0">
+                            <li><a data-action="collapse"><i class="icon-minus4"></i></a></li>
+                            <li><a data-action="reload"><i class="icon-reload"></i></a></li>
+                            <li><a data-action="close"><i class="icon-cross2"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-body collapse in">
+                    <div class="card-block">
+                        <p class="card-text">FullCalendar has a number of different "views", or ways of displaying days and events. The following 5 views are all built in to FullCalendar: <code>month, basicWeek, basicDay, agendaWeek, agendaDay</code>. You can set the initial view of the calendar with the <code>defaultView</code> option. The following example demonstrates <code>agenda</code> views and the <code>defaultView</code> option is set to <code>agendaWeek</code>.</p>
+                        <div id='fc-agenda-views'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src='http://fullcalendar.io/js/fullcalendar-2.1.1/lib/moment.min.js'></script>
+<script src='http://fullcalendar.io/js/fullcalendar-2.1.1/lib/jquery.min.js'></script>
+<script src="http://fullcalendar.io/js/fullcalendar-2.1.1/lib/jquery-ui.custom.min.js"></script>
+<script src='http://fullcalendar.io/js/fullcalendar-2.1.1/fullcalendar.min.js'></script>
+<script text="text/javascript">	$('#fc-agenda-views').fullCalendar({
+		header: {
+			left: 'prev,next today',
+			center: 'title',
+			right: 'month,agendaWeek,agendaDay'
+		},
+		defaultDate: '2016-06-12',
+		defaultView: 'agendaWeek',
+		editable: true,
+		eventLimit: true, // allow "more" link when too many events
+		events: [
+			{
+				title: 'All Day Event',
+				start: '2016-06-01'
+			},
+			{
+				title: 'Long Event',
+				start: '2016-06-07',
+				end: '2016-06-10'
+			},
+			{
+				id: 999,
+				title: 'Repeating Event',
+				start: '2016-06-09T16:00:00'
+			},
+			{
+				id: 999,
+				title: 'Repeating Event',
+				start: '2016-06-16T16:00:00'
+			},
+			{
+				title: 'Conference',
+				start: '2016-06-11',
+				end: '2016-06-13'
+			},
+			{
+				title: 'Meeting',
+				start: '2016-06-12T10:30:00',
+				end: '2016-06-12T12:30:00'
+			},
+			{
+				title: 'Lunch',
+				start: '2016-06-12T12:00:00'
+			},
+			{
+				title: 'Meeting',
+				start: '2016-06-12T14:30:00'
+			},
+			{
+				title: 'Happy Hour',
+				start: '2016-06-12T17:30:00'
+			},
+			{
+				title: 'Dinner',
+				start: '2016-06-12T20:00:00'
+			},
+			{
+				title: 'Birthday Party',
+				start: '2016-06-13T07:00:00'
+			},
+			{
+				title: 'Click for Google',
+				url: 'http://google.com/',
+				start: '2016-06-28'
+			}
+		]
+	});</script>
+<!-- // Full calendar basic example section end -->

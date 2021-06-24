@@ -1,0 +1,24 @@
+//- =========================================================================
+	File Name: color-palette-lime.jade
+	Description:  Bootstrap 4 Lime Color Palette
+	--------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================
+
+block pageVars
+	- var pageTitle   = "Lime Color Page"
+	- var pageSubTitle = "Lime Color Options"
+	- var description  = "Lime Color Palette with background & border color."
+	- var activeMenu  = "color-palette-lime"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Color System"}, {name:"Lime Palette"}])
+
+//- Include page content in page block
+append content
+	include ../contents/color-palette-lime.html

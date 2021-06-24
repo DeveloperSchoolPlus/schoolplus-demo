@@ -1,0 +1,24 @@
+//- =========================================================================================
+	File Name: icons-feather.jade
+	Description: Feather Icons
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================================
+
+block pageVars
+	- var pageTitle = "Feather Icons"
+	- var activeMenu = "icons-feather"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},  {name:"Icons"}, {name:"Feather Icons"}])
+
+
+
+//- Include page content in page block
+append content
+	include ../contents/icons-feather.html

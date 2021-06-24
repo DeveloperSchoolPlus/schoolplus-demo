@@ -1,0 +1,29 @@
+//- =========================================================================================
+	File Name: form-inputs.jade
+	Description: Form Basic Input for Input Fields.
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	========================================================================================== 
+
+block pageVars
+	- var pageTitle = "Basic Inputs"
+	- var pageSubTitle = "Basic Form Input with diffrent elements and styles."
+	- var description  = "Standard form controls supported in all example form elements. Form controls automatically receives global styling. The .form-group class is the easiest way to add some structure to form elements like <input>, <textarea>, and <select>"
+	- var activeMenu = "form-inputs"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Form Components"}, {name:"Basic Inputs"}])
+
+
+
+//- Include page content in page block
+append content
+	include ../contents/form-inputs.html
+
+append pagejs
+	script(src='../../../app-assets/vendors/js/forms/tags/form-field.js', type='text/javascript')

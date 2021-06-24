@@ -1,0 +1,69 @@
+//- =========================================================================================
+	File Name: dashboard-project.jade
+	Description: Project Dashboard
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================================
+
+block pageVars
+	- var pageTitle   = "Project Dashboard"
+	- var activeMenu  = "dashboard-project"
+
+extends template
+
+block page-header
+
+//- Include page content in page block
+append content
+	include ../contents/dashboard-project.html
+
+//- Vendor CSS
+//------------------------------
+//- Add vendor specific CSS
+append vendorcss
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css')
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/charts/morris.css')
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/extensions/unslider.css')
+	//- svg animated weather icons
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/weather-icons/climacons.min.css')
+
+//- Page CSS
+//------------------------------
+//- Add custom page specific CSS
+append pagecss
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/plugins/calendars/clndr.css')
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/core/colors/palette-climacon.css')
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/pages/users.css')
+
+//- Vendor JS
+//------------------------------
+//- Add vendor specific JS
+append vendorjs
+	//- Knob JS
+	script(src='../../../app-assets/vendors/js/extensions/jquery.knob.min.js', type='text/javascript')
+	//- //- Morris Chart
+	script(src='../../../app-assets/vendors/js/charts/raphael-min.js', type='text/javascript')
+	script(src='../../../app-assets/vendors/js/charts/morris.min.js', type='text/javascript')
+	//- //- Chartist js
+	script(src='../../../app-assets/vendors/js/charts/chartist.min.js', type='text/javascript')
+	script(src='../../../app-assets/vendors/js/charts/chartist-plugin-tooltip.js', type='text/javascript')
+	//- //- Chart JS
+	script(src='../../../app-assets/vendors/js/charts/chart.min.js', type='text/javascript')
+	//- //- Sparkline Chart JS
+	script(src='../../../app-assets/vendors/js/charts/jquery.sparkline.min.js', type='text/javascript')
+	//- Vector Maps
+	script(src='../../../app-assets/vendors/js/charts/jvector/jquery-jvectormap-2.0.3.min.js', type='text/javascript')
+	script(src='../../../app-assets/vendors/js/charts/jvector/jquery-jvectormap-world-mill.js', type='text/javascript')
+	//- clndr
+	script(src='../../../app-assets/vendors/js/extensions/moment.min.js', type='text/javascript')
+	script(src='../../../app-assets/vendors/js/extensions/underscore-min.js', type='text/javascript')
+	script(src='../../../app-assets/vendors/js/extensions/clndr.min.js', type='text/javascript')
+	//- Unslider
+	script(src='../../../app-assets/vendors/js/extensions/unslider-min.js', type='text/javascript')
+	
+append pagejs
+	//- //- Project Dashboard JS
+	script(src='../../../app-assets/js/scripts/pages/dashboard-project.js', type='text/javascript')

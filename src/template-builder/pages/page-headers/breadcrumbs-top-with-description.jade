@@ -1,0 +1,22 @@
+block breadcrumbs
+
+.content-header-left.col-md-6.col-xs-12
+  h3.content-header-title.mb-0 #{pageTitle}
+  p.text-muted.mb-0 #{pageSubTitle}
+.content-header-right.col-md-6.col-xs-12
+  .btn-group.float-md-right(role='group', aria-label='Button group with nested dropdown')
+    .btn-group(role='group')
+      button#btnGroupDrop1.btn.btn-outline-primary.dropdown-toggle.dropdown-menu-right(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+        i.icon-cog3.icon-left
+        |  Settings
+      .dropdown-menu(aria-labelledby='btnGroupDrop1')
+        a.dropdown-item(href='card-bootstrap.html') Bootstrap Cards
+        a.dropdown-item(href='component-buttons-extended.html') Buttons Extended
+    a.btn.btn-outline-primary(href='calendars-clndr.html')
+      i.icon-calendar5
+    a.btn.btn-outline-primary(href='timeline-center.html')
+      i.icon-bar-graph-2
+
+.content-header-lead.col-xs-12.mt-1
+  p.lead
+    | #{description}

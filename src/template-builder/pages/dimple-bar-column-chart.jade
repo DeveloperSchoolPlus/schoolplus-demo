@@ -1,0 +1,36 @@
+//- =========================================================================================
+	File Name: dimple-bar-column-chart.jade
+	Description: Dimple bar & column chart examples.
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================================-//
+block pageVars
+	- var pageTitle    = "Dimple Bar Chart"
+	- var pageSubTitle = "Dimple bar chart examples"
+	- var description  = "A diagram in which the numerical values of variables are represented by the height or length of lines or rectangles of equal width."
+	- var activeMenu   = "dimple-bar-column-chart"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Dimple Charts"}, {name:"Bar Chart"}])
+
+//- Include page content in page block
+append content
+	include ../contents/dimple-bar-column-chart.html
+
+//- Vendor JS
+//------------------------------
+//- Add vendor specific JS
+append vendorjs
+	script(src='../../../app-assets/vendors/js/charts/d3.min.js', type='text/javascript')
+	script(src='../../../app-assets/vendors/js/charts/dimple.min.js', type='text/javascript')
+
+//- Page JS
+//------------------------------
+//- Add custom page specific JS
+append pagejs
+	script(src='../../../app-assets/js/scripts/charts/dimple/bar-column.js', type='text/javascript')

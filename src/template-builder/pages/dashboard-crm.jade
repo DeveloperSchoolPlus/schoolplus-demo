@@ -1,0 +1,73 @@
+//- =========================================================================================
+	File Name: dashboard-crm.jade
+	Description: CRM Dashboard
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	========================================================================================== 
+
+block pageVars
+	- var pageTitle   = "CRM Dashboard"
+	- var activeMenu  = "dashboard-crm"
+
+extends template
+
+block page-header
+
+//- Include page content in page block
+append content
+	include ../contents/dashboard-crm.html
+
+//- Vendor JS
+//------------------------------
+//- Add vendor specific JS
+append vendorjs
+	//- Page js for advance cards
+	//- Knob JS
+	script(src='../../../app-assets/vendors/js/extensions/jquery.knob.min.js', type='text/javascript')
+	script(src='../../../app-assets/js/scripts/extensions/knob.js', type='text/javascript')
+
+	//- Morris Chart
+	script(src='../../../app-assets/vendors/js/charts/raphael-min.js', type='text/javascript')
+	script(src='../../../app-assets/vendors/js/charts/morris.min.js', type='text/javascript')
+	//- ChartJS
+	script(src='../../../app-assets/vendors/js/charts/chart.min.js', type='text/javascript')
+	//- Vector Maps
+	script(src='../../../app-assets/vendors/js/charts/jvector/jquery-jvectormap-2.0.3.min.js', type='text/javascript')
+	script(src='../../../app-assets/vendors/js/charts/jvector/jquery-jvectormap-world-mill.js', type='text/javascript')
+	script(src='../../../app-assets/data/jvector/visitor-data.js', type='text/javascript')
+	//- Echarts JS
+	script(src='../../../app-assets/vendors/js/charts/echarts/echarts.js', type='text/javascript')
+	//-Horizontal Timeline js
+	script(src='../../../app-assets/vendors/js/timeline/horizontal-timeline.js', type='text/javascript')
+	//- Unslider
+	script(src='../../../app-assets/vendors/js/extensions/unslider-min.js', type='text/javascript')
+	//- Dropzone
+	script(src='../../../app-assets/vendors/js/extensions/dropzone.min.js', type='text/javascript')
+
+//- Page JS
+//------------------------------
+//- Add custom page specific JS
+append pagejs
+	//- CRM Dashboar page custome js
+	script(src='../../../app-assets/js/scripts/pages/dashboard-crm.js', type='text/javascript')
+
+//- Vendor CSS
+//------------------------------
+//- Add Vendor specific CSS
+append vendorcss
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/file-uploaders/dropzone.min.css')
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/charts/jquery-jvectormap-2.0.3.css')
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/charts/morris.css')
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/extensions/unslider.css')
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/weather-icons/climacons.min.css')
+
+//- Page CSS
+//------------------------------
+//- Add custom page specific CSS
+append pagecss
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/pages/timeline.css')
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/plugins/file-uploaders/dropzone.css')
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/core/colors/palette-climacon.css')

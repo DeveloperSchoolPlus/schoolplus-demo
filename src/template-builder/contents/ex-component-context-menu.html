@@ -1,0 +1,299 @@
+<!-- Initialization section start -->
+<section id="initialization">
+    <div class="row">
+        <div class="col-xs-12 mt-1 mb-3">
+            <h4>Initialization</h4>
+            <hr>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4>Using Data Attributes</h4>
+                        <hr>
+                        <p>Add <code>data-toggle="context"</code> to any element that needs a custom context menu and via CSS set <code>position: relative</code> to the element. Point <code>data-target</code> attribute to your custom context menu.</p>
+
+                        <pre class="language-markup">
+                            <code class="language-markup">
+                                &lt;div class="context" data-toggle="context" data-target="#context-menu"&gt;
+                                    ...
+                                &lt;/div&gt;
+
+                                &lt;div id="context-menu"&gt;
+                                    &lt;ul class="dropdown-menu" role="menu"&gt;
+                                        &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+                                        ...
+                                        &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="col-sm-12 mt-3">
+                        <h4>Using Javascript</h4>
+                        <hr>
+                        <p>Call the context menu via JavaScript:</p>
+
+                        <pre class="language-JavaScript">
+                            <code class="language-JavaScript">
+                                $('.context').contextmenu({
+                                    target:'#context-menu',
+                                    before: function(e,context) {
+                                        // execute code before context menu if shown
+                                    },
+                                    onItem: function(context,e) {
+                                        // execute on menu item selection
+                                    }
+                                })
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- // Initialization section end -->
+
+
+<!-- Content attachment section start -->
+<section id="content-attachment">
+    <div class="row">
+        <div class="col-xs-12 mt-1 mb-3">
+            <h4>Content Attachment</h4>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row match-height">
+        <div class="col-md-6 col-xs-12">
+            <div class="card" data-toggle="context" data-target="#context-menu">
+                <div class="card-header">
+                    <h4 class="card-title">Attach To Card</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-block">
+                        <p>This example demonstrate how to attach context menu to whole card. Add <code>data-toggle="context"</code> to the card and point <code>data-target</code> attribute to the menu.</p>
+
+                        <div id="context-menu">
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xs-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Attach To Elements</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-block">
+                        <p id="attach-element" data-toggle="context" data-target="#attach-element-dropdown">You can attach context menu to element only instead of whole card. Try clicking on this text and outside text to notice the difference.</p>
+
+                        <div id="attach-element-dropdown">
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row match-height">
+        <div class="col-md-6 col-xs-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Exclude Elements</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-block">
+                        <p id="exclude-elements">You can activate context menu within div but exclude elements like span, anchor, label, paragraphs, form components, buttons etc.. In this example <span class="bg-danger px-1 white">we have excluded this span text</span>. Try right click on text on red.</p>
+
+                        <div class="exclude-elements-dropdown">
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">Action</li>
+                                <li class="dropdown-item">Another action</li>
+                                <li class="dropdown-item">Something else here</li>
+                                <li class="dropdown-divider"></li>
+                                <li class="dropdown-item">Separated link</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xs-12">
+            <div class="card" id="menu-name">
+                <div class="card-header">
+                    <h4 class="card-title">Menu Name</h4>
+                </div>
+                <div class="card-body">
+                    <div class="card-block">
+                        <p>Show the menu name of the item that was selected.</p>
+
+                        <div class="menu-name-dropdown">
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">Action</li>
+                                <li class="dropdown-item">Another action</li>
+                                <li class="dropdown-item">Something else here</li>
+                                <li class="dropdown-divider"></li>
+                                <li class="dropdown-item">Separated link</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- // Content attachment section end -->
+
+
+<!-- Options section start -->
+<section id="options">
+    <div class="row">
+        <div class="col-xs-12 mt-1 mb-3">
+            <h4>Options</h4>
+            <hr>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="card-block">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4>Target</h4>
+                        <hr>
+                        <p><code>target</code> - is the equivalent of the data-target attribute. It identifies the html of the menu that will be displayed.</p>
+                    </div>
+                    <div class="col-sm-12 mt-3">
+                        <h4>Before</h4>
+                        <hr>
+                        <p><code>before</code> - is a function that is called before the context menu is displayed. If this function returns false, the context menu will not be displayed. It is passed two parameters,</p>
+
+                        <ul>
+                            <li><code>e</code> - the original event. (You can do an <code>e.preventDefault()</code> to cancel the browser event). </li>
+                            <li><code>context</code> - the DOM element where right click 
+                                urred.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-12 mt-3">
+                        <h4>On Item</h4>
+                        <hr>
+                        <p><code>onItem</code> - is a function that is called when a menu item is clicked. Useful when you want to execute a specific function when an item is clicked. It is passed two parameters,</p>
+
+                        <ul>
+                            <li><code>context</code> - the DOM element where right click occured.</li>
+                            <li><code>e</code> - the click event of the menu item, $(e.target) is the item element.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-12 mt-3">
+                        <h4>Scopes</h4>
+                        <hr>
+                        <p><code>scopes</code> - DOM selector for dynamically added context elements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- // Options section end -->
+
+
+
+<!-- Events section start -->
+<section id="context-menu-events">
+    <div class="row">
+        <div class="col-xs-12 mt-1 mb-3">
+            <h4>Events</h4>
+            <hr>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <h4>onShow Event</h4>
+                        <hr>
+                        <p><code>show.bs.context</code> - This event fires immediately when the menu is opened.</p>
+
+                        <pre class="language-JavaScript">
+                            <code class="language-JavaScript">
+                                $('#myMenu').on('show.bs.context',function () {
+                                    // do something...
+                                });
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <h4>onShown Event</h4>
+                        <hr>
+                        <p><code>shown.bs.context</code> - This event is fired when the dropdown has been made visible to the user.</p>
+
+                        <pre class="language-JavaScript">
+                            <code class="language-JavaScript">
+                                $('#myMenu').on('shown.bs.context',function () {
+                                    // do something...
+                                });
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-6 col-sm-12">
+                        <h4>onHide Event</h4>
+                        <hr>
+                        <p><code>hide.bs.context</code> - This event is fired immediately when the hide instance method has been called.</p>
+
+                        <pre class="language-JavaScript">
+                            <code class="language-JavaScript">
+                                $('#myMenu').on('hide.bs.context',function () {
+                                    // do something...
+                                });
+                            </code>
+                        </pre>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <h4>onHidden Event</h4>
+                        <hr>
+                        <p><code>hidden.bs.context</code> - This event is fired when the dropdown has finished being hidden from the user (will wait for CSS transitions, to complete).</p>
+
+                        <pre class="language-JavaScript">
+                            <code class="language-JavaScript">
+                                $('#myMenu').on('hidden.bs.context',function () {
+                                    // do something...
+                                });
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- // Events section end -->

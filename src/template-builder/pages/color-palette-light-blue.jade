@@ -1,0 +1,24 @@
+//- =========================================================================
+	File Name: color-palette-light-blue.jade
+	Description:  Bootstrap 4 Light Blue Color Palette
+	--------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================
+
+block pageVars
+	- var pageTitle   = "Light Blue Color Page"
+	- var pageSubTitle = "Light Blue Color Options"
+	- var description  = "Light Blue Color Palette with background & border color."
+	- var activeMenu  = "color-palette-light-blue"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Color System"}, {name:"Light Blue Palette"}])
+
+//- Include page content in page block
+append content
+	include ../contents/color-palette-light-blue.html

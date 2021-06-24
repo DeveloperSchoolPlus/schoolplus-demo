@@ -1,0 +1,24 @@
+//- =========================================================================================
+	File Name: icons-ico-moon.jade
+	Description: Ico Moon
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================================
+
+block pageVars
+	- var pageTitle = "Ico Moon"
+	- var activeMenu = "icons-ico-moon"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"}, {name:"Icons"}, {name:"Ico Moon"}])
+
+
+
+//- Include page content in page block
+append content
+	include ../contents/icons-ico-moon.html

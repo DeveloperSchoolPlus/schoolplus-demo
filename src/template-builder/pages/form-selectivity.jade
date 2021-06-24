@@ -1,0 +1,41 @@
+//- =========================================================================================
+	File Name: form-selectivity.jade
+	Description: Modular and light-weight selection library.
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	========================================================================================== 
+
+block pageVars
+	- var pageTitle = "Selectivity select"
+	- var pageSubTitle = "Diffrent elements and styles of Selectivity."
+	- var description  = "Modular and light-weight selection library"
+	- var activeMenu = "form-selectivity"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Form Components"}, {name:"Selectivity select "}])
+
+
+
+//- Include page content in page block
+append content
+	include ../contents/form-selectivity.html
+
+append vendorcss
+	//- Selectivity CSS
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/forms/selects/selectivity-full.min.css')
+
+append vendorjs
+	//- Selectivity Main JS
+	script(src='../../../app-assets/vendors/js/forms/select/selectivity-full.min.js', type='text/javascript')
+
+append pagejs
+	//- Template JS for Selectivity
+	script(src='../../../app-assets/js/scripts/forms/select/form-selectivity.js', type='text/javascript')
+
+append pagecss
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/plugins/forms/selectivity/selectivity.css')

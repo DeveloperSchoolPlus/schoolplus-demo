@@ -1,0 +1,43 @@
+//- =========================================================================================
+	File Name: google-bar-charts.jade
+	Description: google bar chart examples.
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================================-//
+block pageVars
+	- var pageTitle    = "google Bar Chart"
+	- var pageSubTitle = "google bar chart examples"
+	- var description  = "A diagram in which the numerical values of variables are represented by the height or length of lines or rectangles of equal width"
+	- var activeMenu   = "google-bar-charts"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Google Charts"}, {name:"Bar Chart"}])
+
+
+
+//- Include page content in page block
+append content
+	include ../contents/google-bar-charts.html
+
+//- Vendor JS
+//------------------------------
+//- Add vendor specific JS
+append vendorjs
+	script(src='https://www.google.com/jsapi', type='text/javascript')
+
+//- Page JS
+//------------------------------
+//- Add custom page specific JS
+append pagejs
+	script(src='../../../app-assets/js/scripts/charts/google/bar/bar.js', type='text/javascript')
+	script(src='../../../app-assets/js/scripts/charts/google/bar/bar-stacked.js', type='text/javascript')
+	script(src='../../../app-assets/js/scripts/charts/google/bar/bar-intervals.js', type='text/javascript')
+	script(src='../../../app-assets/js/scripts/charts/google/bar/column.js', type='text/javascript')
+	script(src='../../../app-assets/js/scripts/charts/google/bar/stacked-column.js', type='text/javascript')
+	script(src='../../../app-assets/js/scripts/charts/google/bar/combo.js', type='text/javascript')
+	script(src='../../../app-assets/js/scripts/charts/google/bar/histogram.js', type='text/javascript')

@@ -1,0 +1,25 @@
+// BEGIN VENDOR CSS
+link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/bootstrap.css')
+// font icons
+link(rel='stylesheet', type='text/css', href='../../../app-assets/fonts/icomoon.css')
+link(rel='stylesheet', type='text/css', href='../../../app-assets/fonts/flag-icon-css/css/flag-icon.min.css')
+link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/sliders/slick/slick.css')
+link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/extensions/pace.css')
+block vendorcss
+// END VENDOR CSS
+
+// BEGIN ROBUST CSS
+link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/bootstrap-extended.css')
+link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/app.css')
+link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/colors.css')
+if (useDirection == 'rtl')
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/custom#{rtl}.css')
+// END ROBUST CSS
+
+// BEGIN Page Level CSS
+block pagecss
+// END Page Level CSS
+
+// BEGIN Custom CSS
+link(rel='stylesheet', type='text/css', href='../../../assets/css/style#{rtl}.css')
+// END Custom CSS

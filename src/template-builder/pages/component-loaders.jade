@@ -1,0 +1,27 @@
+//- =========================================================================
+	File Name: component-loaders.jade
+	Description: This Page contains Icon spinners and Progress bars.
+	--------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================
+
+block pageVars
+	- var pageTitle   = "Loaders"
+	- var pageSubTitle = "Loader & Icon Spinners"
+	- var description  = "Loaders contains Icon spinners with different styles."
+	- var activeMenu  = "component-loaders"
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Components"}, {name:"Loaders"}])
+
+//- Include page content in page block
+append content
+	include ../contents/component-loaders.html
+
+append pagecss
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/plugins/loaders/loaders.min.css')
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/core/colors/palette-loader.css')

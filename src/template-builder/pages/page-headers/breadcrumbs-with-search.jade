@@ -1,0 +1,13 @@
+.content-header-left.col-md-6.col-xs-12
+  h2.content-header-title.mb-0 #{pageTitle}
+  .row.breadcrumbs-top
+    block breadcrumbs
+.content-header-right.col-md-6.col-xs-12
+  fieldset.form-group.relative.has-icon-left.col-md-5.col-xs-12.float-xs-right.p-0
+    input#iconLeft.form-control.round(type='text', placeholder='Search...')
+    .form-control-position
+      i.icon-search7
+
+.content-header-lead.col-xs-12.mt-2
+  p.lead
+    | #{description}

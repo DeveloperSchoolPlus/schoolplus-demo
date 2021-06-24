@@ -1,0 +1,24 @@
+//- =========================================================================
+	File Name: color-palette-green.jade
+	Description:  Bootstrap 4 Green Color Palette
+	--------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================
+
+block pageVars
+	- var pageTitle   = "Green Color Page"
+	- var pageSubTitle = "Green Color Options"
+	- var description  = "Green Color Palette with background & border color."
+	- var activeMenu  = "color-palette-green"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Color System"}, {name:"Green Palette"}])
+
+//- Include page content in page block
+append content
+	include ../contents/color-palette-green.html

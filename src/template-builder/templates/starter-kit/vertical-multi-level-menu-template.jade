@@ -1,0 +1,88 @@
+//- ===============================================================================================
+	File Name: vertical-multi-level-menu-template.jade
+	Description: A template file for generating template with vertical multi level menu.
+	----------------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	================================================================================================ -//
+
+extends ../../base
+
+//- Template customization
+//------------------------
+block templateConfig
+	- var templateCustom = "vertical-layout vertical-mmenu"
+	- var dataMenu = "vertical-mmenu"
+
+//- Page level customization
+//------------------------
+block pageConfig
+	- var menuOpen = "hover"
+	- var logoType = 'light'
+
+block navbarConfig
+	- var navbarPosition = "navbar-fixed-top"
+	- var navbarColor = "navbar-dark"
+	- var navbarShadow = true
+	- var navbarBorder = true
+
+
+block verticalMenuConfig
+	- var menuType = "menu-fixed"
+	- var menuColor = "menu-dark"
+	- var menuOpenType = "menu-accordion"
+	- var menuShadow = true
+	- var menuBorder = true
+	
+
+block footerConfig
+	- var footerType = "navbar-fixed-bottom"
+	- var footerColor = "footer-dark"
+	
+
+//- Template includes
+//-------------------
+block preloader
+	include ../sections/preloader/vertical-multi-level-menu
+
+block header
+	include ../sections/header/sk-header
+
+block page-header
+	if blankPage != true
+		include ../../pages/page-headers/breadcrumbs-with-round-button
+
+block main-menu
+	include ../sections/menu/starter-kit/vertical-multi-level-menu
+
+block footer
+	include ../sections/footer/footer
+
+//- Template specific dependency
+//------------------------------
+
+//- Vendor CSS
+//------------------------------
+//- Add Vendor specific CSS
+block vendorcss
+
+//- Page CSS
+//------------------------------
+
+//- Add custom page specific CSS
+block pagecss
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/core/menu/menu-types/vertical-multi-level-menu.css')
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/core/menu/menu-types/vertical-overlay-menu.css')
+
+//- Vendor JS
+//------------------------------
+//- Add vendor specific JS
+block vendorjs
+	script(src='../../../app-assets/vendors/js/menu/jquery.mmenu.all.min.js', type='text/javascript')
+
+//- Page JS
+//------------------------------
+//- Add custom page specific JS
+block pagejs

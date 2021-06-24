@@ -1,0 +1,42 @@
+//- =========================================================================================
+	File Name: form-dual-listbox.jade
+	Description: Bootstrap Dual Listbox
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	========================================================================================== 
+
+block pageVars
+	- var pageTitle = "Dual Listbox"
+	- var pageSubTitle = "Works on all modern browsers and on touch devices."
+	- var description  = "Bootstrap Dual Listbox is a responsive dual listbox widget optimized for Twitter Bootstrap."
+	- var activeMenu = "form-dual-listbox"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Form Components"}, {name:"Dual Listbox"}])
+
+
+
+//- Include page content in page block
+append content
+	include ../contents/form-dual-listbox.html
+
+append vendorcss
+	//- Dual Listbox css
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/forms/listbox/bootstrap-duallistbox.min.css')
+
+append vendorjs
+	//- Dual Listbox for Bootstrap JS
+	script(src='../../../app-assets/vendors/js/forms/listbox/jquery.bootstrap-duallistbox.min.js', type='text/javascript')
+
+append pagejs
+	//- Template Js for Duallistbox
+	script(src='../../../app-assets/js/scripts/forms/listbox/form-duallistbox.js', type='text/javascript')
+
+append pagecss
+	//- Dual listbox customization
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/plugins/forms/dual-listbox.css')

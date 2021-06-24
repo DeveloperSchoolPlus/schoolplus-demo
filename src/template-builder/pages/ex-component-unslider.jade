@@ -1,0 +1,44 @@
+//- =========================================================================================
+	File Name: ex-component-unslider.jade
+	Description: The simplest jQuery slider
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================================-//
+
+block pageVars
+	- var pageTitle    = "Unslider"
+	- var pageSubTitle = "The simplest jQuery slider"
+	- var description  = "Unslider is a super-simple slider with swipe, slide, Velocity.js and fade animation support."
+	- var activeMenu   = "ex-component-unslider"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Extra Components"}, {name:"Unslider"}])
+
+
+
+//- Include page content in page block
+append content
+	include ../contents/ex-component-unslider.html
+
+//- Vendor CSS
+//------------------------------
+//- Add vendor specific CSS
+append vendorcss
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/extensions/unslider.css')
+
+//- Vendor JS
+//------------------------------
+//- Add vendor specific JS
+append vendorjs
+	script(src='../../../app-assets/vendors/js/extensions/unslider-min.js', type='text/javascript')
+
+//- Page JS
+//------------------------------
+//- Add custom page specific JS
+append pagejs
+	script(src='../../../app-assets/js/scripts/extensions/unslider.js', type='text/javascript')

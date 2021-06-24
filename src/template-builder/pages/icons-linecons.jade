@@ -1,0 +1,24 @@
+//- =========================================================================================
+	File Name: icons-linecons.jade
+	Description: Linecons
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================================
+
+block pageVars
+	- var pageTitle = "Linecons"
+	- var activeMenu = "icons-linecons"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"}, {name:"Icons"}, {name:"Linecons"}])
+
+
+
+//- Include page content in page block
+append content
+	include ../contents/icons-linecons.html

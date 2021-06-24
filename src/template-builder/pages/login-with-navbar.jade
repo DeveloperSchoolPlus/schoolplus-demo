@@ -1,0 +1,57 @@
+//- =========================================================================================
+	File Name: login-with-navbar.jade
+	Description: User simple login page with navbar.
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================================-//
+
+block pageVars
+	- var pageTitle    = "Login with Header"
+	- var pageSubTitle = "Login Simple With Header"
+	- var description  = "User simple login page with navbar."
+	- var activeMenu   = "login-with-navbar"
+
+extends template
+
+append pageConfig
+	- var contentLayout = '1-column'
+	- var logoType = "light"
+	- var bodyCustom = "bg-cyan bg-lighten-2"
+	- var headerType = "header-simple"
+	- var navbarFixed = true
+
+
+append navbarConfig
+	- var navbarPosition = "navbar-fixed-top"
+	- var navbarColor = "navbar-dark"
+
+append footerConfig
+	- var footerType = "navbar-fixed-bottom"
+	- var footerColor = "footer-dark"
+
+block page-header
+
+//- Include page content in page block
+append content
+	include ../contents/login-with-navbar.html
+
+//- Page CSS
+//------------------------------
+//- Add custom page specific CSS
+append pagecss
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/pages/login-register.css')
+
+//- Vendor JS
+//------------------------------
+//- Add vendor specific JS
+append vendorjs
+	script(src='../../../app-assets/vendors/js/forms/validation/jqBootstrapValidation.js', type='text/javascript')
+
+//- Page JS
+//------------------------------
+//- Add custom page specific JS
+append pagejs
+	script(src='../../../app-assets/js/scripts/forms/form-login-register.js', type='text/javascript')

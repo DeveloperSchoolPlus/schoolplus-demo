@@ -1,0 +1,43 @@
+//- =========================================================================================
+	File Name: component-dropdowns.jade
+	Description: Dropdown
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	========================================================================================== 
+
+block pageVars
+	- var pageTitle   = "Dropdowns"
+	- var pageSubTitle = "Dropdowns are toggleable, contextual overlays for displaying lists of links and more."
+	- var description = "Dropdowns are made interactive with the included Bootstrap dropdown JavaScript plugin.Historically dropdown menu contents had to be links, but that’s no longer the case with v4. Now you can optionally use &lt;button&gt; elements in your dropdowns instead of just &lt;a&gt;"
+	- var activeMenu  = "component-dropdowns"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Components"}, {name:"Dropdowns"}])
+
+//- Include page content in page block
+append content
+	include ../contents/component-dropdowns.html
+
+append vendorcss
+	//- iCheck css
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/forms/icheck/icheck.css')
+	//- Switchery CSS
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/forms/toggle/switchery.min.css')
+
+append vendorjs
+	//- Icheck JS
+	script(src='../../../app-assets/vendors/js/forms/icheck/icheck.min.js', type='text/javascript')
+	//- Switchery JS
+	script(src='../../../app-assets/vendors/js/forms/toggle/switchery.min.js', type='text/javascript')
+
+append pagejs
+	//-  Template JS
+	script(src='../../../app-assets/js/scripts/dropdowns/dropdowns.js', type='text/javascript')
+
+append pagecss
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/plugins/forms/switch.css')

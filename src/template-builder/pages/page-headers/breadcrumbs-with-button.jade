@@ -1,0 +1,22 @@
+block breadcrumbs
+
+.content-header-left.col-md-6.col-xs-12
+  h2.content-header-title.mb-0 #{pageTitle}
+  p.text-muted.mb-0 #{pageSubTitle}
+.content-header-right.text-md-right.col-md-6.col-xs-12
+  .btn-group
+    button.btn.btn-round.btn-primary(type='button')
+      i.icon-cog3.pr-1
+      |  Settings
+    button.btn.btn-round.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+      span.sr-only Toggle Dropdown
+    .dropdown-menu
+      a.dropdown-item(href='#') Action
+      a.dropdown-item(href='#') Another action
+      a.dropdown-item(href='#') Something else here
+      .dropdown-divider
+      a.dropdown-item(href='#') Separated link
+
+.content-header-lead.col-xs-12.mt-2
+  p.lead
+    | #{description}

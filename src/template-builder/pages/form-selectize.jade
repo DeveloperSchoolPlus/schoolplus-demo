@@ -1,0 +1,45 @@
+//- =========================================================================================
+	File Name: form-selectize.jade
+	Description: Modular and light-weight selection library.
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	========================================================================================== 
+
+block pageVars
+	- var pageTitle = "Selectize select"
+	- var pageSubTitle = "Selectize is the hybrid of form fields."
+	- var description  = "Selectize is the hybrid of a textbox and <select> box. It's jQuery-based and it's useful for tagging, contact lists, country selectors, and so on."
+	- var activeMenu = "form-selectize"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Form Components"}, {name:"Selectize select "}])
+
+
+
+//- Include page content in page block
+append content
+	include ../contents/form-selectize.html
+
+append vendorcss
+	//- Selectize CSS
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/forms/selects/selectize.css')
+	//- Selectize theme CSS
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/forms/selects/selectize.default.css')
+
+append pagecss
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/plugins/forms/selectize/selectize.css')
+
+append vendorjs
+	//- Selectize JS
+	script(src='../../../app-assets/vendors/js/forms/select/selectize.min.js', type='text/javascript')
+	//- jQuery UI JS
+	script(src='../../../app-assets/js/core/libraries/jquery_ui/jquery-ui.min.js', type='text/javascript')
+
+append pagejs
+	//- Template js for Selectize
+	script(src='../../../app-assets/js/scripts/forms/select/form-selectize.js', type='text/javascript')

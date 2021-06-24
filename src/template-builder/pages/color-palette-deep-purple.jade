@@ -1,0 +1,24 @@
+//- =========================================================================
+	File Name: color-palette-deep-purple.jade
+	Description:  Bootstrap 4 Deep Purple Color Palette
+	--------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================
+
+block pageVars
+	- var pageTitle   = "Deep Purple Color Page"
+	- var pageSubTitle = "Deep Purple Color Options"
+	- var description  = "Deep Purple Color Palette with background & border color."
+	- var activeMenu  = "color-palette-deep-purple"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Color System"}, {name:"Deep Purple Palette"}])
+
+//- Include page content in page block
+append content
+	include ../contents/color-palette-deep-purple.html

@@ -1,0 +1,54 @@
+//- =========================================================================================
+	File Name: invoice-summary.jade
+	Description: Invoice smmary page with stats
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================================-//
+
+block pageVars
+	- var pageTitle    = "Invoice Summary"
+	- var pageSubTitle = "Overall invoice summary."
+	//- var description  = ""
+	- var activeMenu   = "invoice-summary"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Invoice"}, {name:"Invoice Summary"}])
+
+//- Include page content in page block
+append content
+	include ../contents/invoice-summary.html
+
+
+//- Vendor CSS
+//------------------------------
+//- Add Vendor specific CSS
+append vendorcss
+
+//- Page CSS
+//------------------------------
+
+//- Add custom page specific CSS
+append pagecss
+
+//- Vendor JS
+//------------------------------
+//- Add vendor specific JS
+append vendorjs
+	//- eChart
+	script(src='../../../app-assets/vendors/js/charts/echarts/echarts.js', type='text/javascript')
+
+//- Page JS
+//------------------------------
+//- Add custom page specific JS
+append pagejs
+	//- Custom: Total Receivables
+	script(src='../../../app-assets/js/scripts/pages/invoice-total-recievables.js', type='text/javascript')
+	//- Custom: Sales and Expenses
+	script(src='../../../app-assets/js/scripts/pages/invoice-sales-and-expenses.js', type='text/javascript')
+	//- Custom: Your Top Expenses
+	script(src='../../../app-assets/js/scripts/pages/invoice-top-expenses.js', type='text/javascript')

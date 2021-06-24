@@ -1,0 +1,24 @@
+//- =========================================================================================
+	File Name: icons-ionicons.jade
+	Description: Ionicons
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================================
+
+block pageVars
+	- var pageTitle = "Ionicons"
+	- var activeMenu = "icons-ionicons"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"}, {name:"Icons"}, {name:"Ionicons"}])
+
+
+
+//- Include page content in page block
+append content
+	include ../contents/icons-ionicons.html

@@ -1,0 +1,24 @@
+//- =========================================================================
+	File Name: color-palette-deep-orange.jade
+	Description:  Bootstrap 4 Deep Orange Color Palette
+	--------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================
+
+block pageVars
+	- var pageTitle   = "Deep Orange Color Page"
+	- var pageSubTitle = "Deep Orange Color Options"
+	- var description  = "Deep Orange Color Palette with background & border color."
+	- var activeMenu  = "color-palette-deep-orange"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Color System"}, {name:"Deep Orange Palette"}])
+
+//- Include page content in page block
+append content
+	include ../contents/color-palette-deep-orange.html

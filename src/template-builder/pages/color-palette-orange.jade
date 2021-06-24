@@ -1,0 +1,25 @@
+//- =========================================================================
+	File Name: color-palette-orange.jade
+	Description:  Bootstrap 4 Orange Color Palette
+	--------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================
+
+block pageVars
+	- var pageTitle   = "Orange Color Page"
+	- var pageSubTitle = "Orange Color Options"
+	- var description  = "Orange Color Palette with background & border color."
+	- var activeMenu  = "color-palette-orange"
+	- var pageSubTitle = "Orange Color Palette with color code and other elements"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Color System"}, {name:"Orange Palette"}])
+
+//- Include page content in page block
+append content
+	include ../contents/color-palette-orange.html

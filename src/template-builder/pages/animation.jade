@@ -1,0 +1,40 @@
+//- =========================================================================
+	File Name: animation.jade
+	Description:  All animations for components using animate.js
+	--------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================
+
+block pageVars
+	- var pageTitle   = "Animations"
+	- var pageSubTitle = "A cross-browser library of CSS animations."
+	- var description  = "animate.css is a bunch of cool, fun, and cross-browser animations for you to use in your projects. Great for emphasis, home pages, sliders, and general just-add-water-awesomeness."
+	- var activeMenu  = "animation"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"}, {name:"Animation"}])
+
+//- Include page content in page block
+append content
+	include ../contents/animation.html
+
+//- Vendor JS
+//------------------------------
+//- Add vendor specific JS
+append vendorjs
+	script(src='../../../app-assets/vendors/js/animation/jquery.appear.js', type='text/javascript')
+
+append pagecss
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/plugins/animate/animate.css')
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/core/colors/palette-callout.css')
+
+//- Page JS
+//------------------------------
+//- Add custom page specific JS
+append pagejs
+	script(src='../../../app-assets/js/scripts/animation/animation.js', type='text/javascript')

@@ -1,0 +1,49 @@
+//- =========================================================================================
+	File Name: pickers-color-picker.jade
+	Description: Add color picker to field or to any other element.It can be used as a component, alpha picker and more.
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	========================================================================================== 
+
+block pageVars
+	- var pageTitle = "Color picker"
+	- var pageSubTitle = "Fancy and customizable color picker"
+	- var description  = "Add color picker to field or to any other element. It can be used as a component, alpha picker and more."
+	- var activeMenu = "pickers-color-picker"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Pickers"}, {name:"Color"}])
+
+
+
+//- Include page content in page block
+append content
+	include ../contents/pickers-color-picker.html
+
+append vendorcss
+	//- Bootstrap Colorpicker CSS
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/pickers/colorpicker/bootstrap-colorpicker.min.css')
+	//- Minicolors CSS
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/pickers/miniColors/jquery.minicolors.css')
+	//- Spectrum CSS
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/pickers/spectrum/spectrum.css')
+
+append vendorjs
+	//- Bootstrap Color Picker JS
+	script(src='../../../app-assets/vendors/js/pickers/colorpicker/bootstrap-colorpicker.min.js', type='text/javascript')
+	//- Minicolors JS
+	script(src='../../../app-assets/vendors/js/pickers/miniColors/jquery.minicolors.min.js', type='text/javascript')
+	//- Spectrum JS
+	script(src='../../../app-assets/vendors/js/pickers/spectrum/spectrum.js', type='text/javascript')
+
+append pagecss
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/plugins/pickers/colorpicker/colorpicker.css')
+
+append pagejs
+	//- Template JS for Color Picker
+	script(src='../../../app-assets/js/scripts/pickers/colorpicker/picker-color.js', type='text/javascript')

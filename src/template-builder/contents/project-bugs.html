@@ -1,0 +1,669 @@
+<section class="row">
+    <div class="col-xs-12">
+        <div class="card">
+            <div class="card-header">
+            	<h4 class="card-title">All Bugs</h4>
+            	<a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+        		<div class="heading-elements">
+                    <button class="btn btn-primary btn-sm"><i class="icon-plus4 white"></i> Submit Bug</button>
+        			<span class="dropdown">
+                        <button id="btnSearchDrop1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-warning btn-sm dropdown-toggle dropdown-menu-right"><i class="icon-cloud-download3 white"></i></button>
+                        <span aria-labelledby="btnSearchDrop1" class="dropdown-menu mt-1 dropdown-menu-right">
+                            <a href="#" class="dropdown-item"><i class="icon-calendar5"></i> Due Date</a>
+                            <a href="#" class="dropdown-item"><i class="icon-shuffle3"></i> Priority </a>
+                            <a href="#" class="dropdown-item"><i class="icon-bar-graph"></i> Progress</a>
+                            <a href="#" class="dropdown-item"><i class="icon-head"></i> Assign to</a>
+                        </span>
+                    </span>
+        			<button class="btn btn-success btn-sm"><i class="icon-cog3 white"></i></button>
+            	</div>
+            </div>
+            <div class="card-body collapse in">
+                <div class="card-block">
+	                <!-- Task List table -->
+	                <table id="project-bugs-list" class="table table-white-space table-bordered row-grouping display table-responsive no-wrap icheck table-middle">
+				        <thead>
+				            <tr>
+				                <th>ID</th>
+				                <th>Bug</th>
+				                <th>Asignee</th>
+				                <th>Status</th>
+				                <th>Severity</th>
+				                <th>Due</th>
+				                <th>Actions</th>
+				            </tr>
+				        </thead>
+				        <tbody>
+				            <tr>
+				                <td><a href="#" class="text-bold-600">#101</a></td>
+				                <td>
+				                	<a href="#" class="text-bold-600">Vertical menu issue on iPad</a>
+				                	<p class="text-muted font-small-2">Phasellus vel elit volutpat, egestas urna a.</p>
+				                </td>
+			                    <td class="text-xs-center">
+				                	<span class="avatar avatar-busy">
+				                		<img src="../../../app-assets/images/portrait/small/avatar-s-3.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="John Doe"><i class=""></i>
+				                	</span>
+				                </td>
+				                <td><span class="tag tag-default tag-info">In Progress</span></td>
+				                <td>
+				                	<select class="form-control" tabindex="-1" aria-hidden="true">
+				                		<option value="0">Show stopper</option>
+				                		<option value="1">Critical</option>
+				                		<option value="0" selected>Major</option>
+				                		<option value="2">Minor</option>
+				                	</select>
+				                </td>
+				                <td>
+				                	<fieldset class="form-group position-relative has-icon-left">
+			                            <div>
+			                                <i class="icon-calendar5"></i>
+			                            	<input type="text" class="form-control width-100 datepicker-default no-border px-1 pt-0" id="date-picker-1" placeholder="Icon Left, Default Input" value="22 August, 16">
+			                            </div>
+			                        </fieldset>
+			                    </td>
+				                <td>
+				                	<span class="dropdown">
+				                        <button id="btnSearchDrop2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-primary dropdown-toggle dropdown-menu-right"><i class="icon-cog3"></i></button>
+				                        <span aria-labelledby="btnSearchDrop2" class="dropdown-menu mt-1 dropdown-menu-right">
+				                            <a href="#" class="dropdown-item"><i class="icon-eye6"></i> Open Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-pen3"></i> Edit Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-check2"></i> Complete Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-outbox"></i> Assign to</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-trash4"></i> Delete Bug</a>
+				                        </span>
+				                    </span>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td><a href="#" class="text-bold-600">#220</a></td>
+				                <td>
+				                	<a href="#" class="text-bold-600">Progress bar animation improvement</a>
+				                	<p class="text-muted font-small-2">Phasellus vel elit volutpat, egestas urna a.</p>
+				                </td>
+			                    <td class="text-xs-center">
+				                	<span class="avatar avatar-busy">
+				                		<img src="../../../app-assets/images/portrait/small/avatar-s-4.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="Amy Doe"><i class=""></i>
+				                	</span>
+				                </td>
+				                <td><span class="tag tag-default tag-warning">Open</span></td>
+				                <td>
+				                	<select class="form-control" tabindex="-1" aria-hidden="true">
+				                		<option value="0">Show stopper</option>
+				                		<option value="1" selected>Critical</option>
+				                		<option value="0">Major</option>
+				                		<option value="2">Minor</option>
+				                	</select>
+				                </td>
+				                <td>
+				                	<fieldset class="form-group position-relative has-icon-left">
+			                            <div>
+			                                <i class="icon-calendar5"></i>
+			                            	<input type="text" class="form-control width-100 datepicker-default no-border px-1 pt-0" id="date-picker-2" placeholder="Icon Left, Default Input" value="12 August, 16">
+			                            </div>
+			                        </fieldset>
+			                    </td>
+				                <td>
+				                	<span class="dropdown">
+				                        <button id="btnSearchDrop3" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-primary dropdown-toggle dropdown-menu-right"><i class="icon-cog3"></i></button>
+				                        <span aria-labelledby="btnSearchDrop3" class="dropdown-menu mt-1 dropdown-menu-right">
+				                            <a href="#" class="dropdown-item"><i class="icon-eye6"></i> Open Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-pen3"></i> Edit Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-check2"></i> Complete Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-outbox"></i> Assign to</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-trash4"></i> Delete Bug</a>
+				                        </span>
+				                    </span>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td><a href="#" class="text-bold-600">#420</a></td>
+				                <td>
+				                	<a href="#" class="text-bold-600">Authentication API security issue</a>
+				                	<p class="text-muted font-small-2">Phasellus vel elit volutpat, egestas urna a.</p>
+				                </td>
+			                    <td class="text-xs-center">
+				                	<span class="avatar avatar-busy">
+				                		<img src="../../../app-assets/images/portrait/small/avatar-s-5.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="Joe Doe"><i class=""></i>
+				                	</span>
+				                </td>
+				                <td><span class="tag tag-default tag-danger">Reopen</span></td>
+				                <td>
+				                	<select class="form-control" tabindex="-1" aria-hidden="true">
+				                		<option value="0" selected>Show stopper</option>
+				                		<option value="1">Critical</option>
+				                		<option value="0">Major</option>
+				                		<option value="2">Minor</option>
+				                	</select>
+				                </td>
+				                <td>
+				                	<fieldset class="form-group position-relative has-icon-left">
+			                            <div>
+			                                <i class="icon-calendar5"></i>
+			                            	<input type="text" class="form-control width-100 datepicker-default no-border px-1 pt-0" id="date-picker-3" placeholder="Icon Left, Default Input" value="12 August, 16">
+			                            </div>
+			                        </fieldset>
+			                    </td>
+				                <td>
+				                	<span class="dropdown">
+				                        <button id="btnSearchDrop4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-primary dropdown-toggle dropdown-menu-right"><i class="icon-cog3"></i></button>
+				                        <span aria-labelledby="btnSearchDrop4" class="dropdown-menu mt-1 dropdown-menu-right">
+				                            <a href="#" class="dropdown-item"><i class="icon-eye6"></i> Open Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-pen3"></i> Edit Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-check2"></i> Complete Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-outbox"></i> Assign to</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-trash4"></i> Delete Bug</a>
+				                        </span>
+				                    </span>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td><a href="#" class="text-bold-600">#124</a></td>
+				                <td>
+				                	<a href="#" class="text-bold-600">Project page chart issue</a>
+				                	<p class="text-muted font-small-2">Phasellus vel elit volutpat, egestas urna a.</p>
+				                </td>
+			                    <td class="text-xs-center">
+				                	<span class="avatar avatar-busy">
+				                		<img src="../../../app-assets/images/portrait/small/avatar-s-16.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="Joe Doe"><i class=""></i>
+				                	</span>
+				                </td>
+				                <td><span class="tag tag-default tag-info">In Progress</span></td>
+				                <td>
+				                	<select class="form-control" tabindex="-1" aria-hidden="true">
+				                		<option value="0">Show stopper</option>
+				                		<option value="1">Critical</option>
+				                		<option value="0">Major</option>
+				                		<option value="2" selected>Minor</option>
+				                	</select>
+				                </td>
+				                <td>
+				                	<fieldset class="form-group position-relative has-icon-left">
+			                            <div>
+			                                <i class="icon-calendar5"></i>
+			                            	<input type="text" class="form-control width-100 datepicker-default no-border px-1 pt-0" id="date-picker-4" placeholder="Icon Left, Default Input" value="25 Oct, 16">
+			                            </div>
+			                        </fieldset>
+			                    </td>
+				                <td>
+				                	<span class="dropdown">
+				                        <button id="btnSearchDrop5" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-primary dropdown-toggle dropdown-menu-right"><i class="icon-cog3"></i></button>
+				                        <span aria-labelledby="btnSearchDrop5" class="dropdown-menu mt-1 dropdown-menu-right">
+				                            <a href="#" class="dropdown-item"><i class="icon-eye6"></i> Open Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-pen3"></i> Edit Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-check2"></i> Complete Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-outbox"></i> Assign to</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-trash4"></i> Delete Bug</a>
+				                        </span>
+				                    </span>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td><a href="#" class="text-bold-600">#140</a></td>
+				                <td>
+				                	<a href="#" class="text-bold-600">Profile page timeline issue</a>
+				                	<p class="text-muted font-small-2">Phasellus vel elit volutpat, egestas urna a.</p>
+				                </td>
+			                    <td class="text-xs-center">
+				                	<span class="avatar avatar-busy">
+				                		<img src="../../../app-assets/images/portrait/small/avatar-s-7.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="Joe Doe"><i class=""></i>
+				                	</span>
+				                </td>
+				                <td><span class="tag tag-default tag-success">To be tested</span></td>
+				                <td>
+				                	<select class="form-control" tabindex="-1" aria-hidden="true">
+				                		<option value="0">Show stopper</option>
+				                		<option value="1">Critical</option>
+				                		<option value="0">Major</option>
+				                		<option value="2" selected>Minor</option>
+				                	</select>
+				                </td>
+				                <td>
+				                	<fieldset class="form-group position-relative has-icon-left">
+			                            <div>
+			                                <i class="icon-calendar5"></i>
+			                            	<input type="text" class="form-control width-100 datepicker-default no-border px-1 pt-0" id="date-picker-5" placeholder="Icon Left, Default Input" value="15 August, 16">
+			                            </div>
+			                        </fieldset>
+			                    </td>
+				                <td>
+				                	<span class="dropdown">
+				                        <button id="btnSearchDrop6" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-primary dropdown-toggle dropdown-menu-right"><i class="icon-cog3"></i></button>
+				                        <span aria-labelledby="btnSearchDrop6" class="dropdown-menu mt-1 dropdown-menu-right">
+				                            <a href="#" class="dropdown-item"><i class="icon-eye6"></i> Open Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-pen3"></i> Edit Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-check2"></i> Complete Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-outbox"></i> Assign to</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-trash4"></i> Delete Bug</a>
+				                        </span>
+				                    </span>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td><a href="#" class="text-bold-600">#261</a></td>
+				                <td>
+				                	<a href="#" class="text-bold-600">Tooltip display issue in login form</a>
+				                	<p class="text-muted font-small-2">Phasellus vel elit volutpat, egestas urna a.</p>
+				                </td>
+			                    <td class="text-xs-center">
+				                	<span class="avatar avatar-busy">
+				                		<img src="../../../app-assets/images/portrait/small/avatar-s-8.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="Joe Doe"><i class=""></i>
+				                	</span>
+				                </td>
+				                <td><span class="tag tag-default tag-warning">Open</span></td>
+				                <td>
+				                	<select class="form-control" tabindex="-1" aria-hidden="true">
+				                		<option value="0">Show stopper</option>
+				                		<option value="1">Critical</option>
+				                		<option value="0" selected>Major</option>
+				                		<option value="2">Minor</option>
+				                	</select>
+				                </td>
+				                <td>
+				                	<fieldset class="form-group position-relative has-icon-left">
+			                            <div>
+			                                <i class="icon-calendar5"></i>
+			                            	<input type="text" class="form-control width-100 datepicker-default no-border px-1 pt-0" id="date-picker-6" placeholder="Icon Left, Default Input" value="28 June, 16">
+			                            </div>
+			                        </fieldset>
+			                    </td>
+				                <td>
+				                	<span class="dropdown">
+				                        <button id="btnSearchDrop7" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-primary dropdown-toggle dropdown-menu-right"><i class="icon-cog3"></i></button>
+				                        <span aria-labelledby="btnSearchDrop7" class="dropdown-menu mt-1 dropdown-menu-right">
+				                            <a href="#" class="dropdown-item"><i class="icon-eye6"></i> Open Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-pen3"></i> Edit Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-check2"></i> Complete Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-outbox"></i> Assign to</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-trash4"></i> Delete Bug</a>
+				                        </span>
+				                    </span>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td><a href="#" class="text-bold-600">#158</a></td>
+				                <td>
+				                	<a href="#" class="text-bold-600">Button loading issue on submit</a>
+				                	<p class="text-muted font-small-2">Phasellus vel elit volutpat, egestas urna a.</p>
+				                </td>
+			                    <td class="text-xs-center">
+				                	<span class="avatar avatar-busy">
+				                		<img src="../../../app-assets/images/portrait/small/avatar-s-9.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="Joe Doe"><i class=""></i>
+				                	</span>
+				                </td>
+				                <td><span class="tag tag-default tag-default">Closed</span></td>
+				                <td>
+				                	<select class="form-control" tabindex="-1" aria-hidden="true">
+				                		<option value="0">Show stopper</option>
+				                		<option value="1">Critical</option>
+				                		<option value="0">Major</option>
+				                		<option value="2" selected>Minor</option>
+				                	</select>
+				                </td>
+				                <td>
+				                	<fieldset class="form-group position-relative has-icon-left">
+			                            <div>
+			                                <i class="icon-calendar5"></i>
+			                            	<input type="text" class="form-control width-100 datepicker-default no-border px-1 pt-0" id="date-picker-7" placeholder="Icon Left, Default Input" value="18 July, 16">
+			                            </div>
+			                        </fieldset>
+			                    </td>
+				                <td>
+				                	<span class="dropdown">
+				                        <button id="btnSearchDrop8" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-primary dropdown-toggle dropdown-menu-right"><i class="icon-cog3"></i></button>
+				                        <span aria-labelledby="btnSearchDrop8" class="dropdown-menu mt-1 dropdown-menu-right">
+				                            <a href="#" class="dropdown-item"><i class="icon-eye6"></i> Open Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-pen3"></i> Edit Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-check2"></i> Complete Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-outbox"></i> Assign to</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-trash4"></i> Delete Bug</a>
+				                        </span>
+				                    </span>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td><a href="#" class="text-bold-600">#158</a></td>
+				                <td>
+				                	<a href="#" class="text-bold-600">D3 Chart responsive issue</a>
+				                	<p class="text-muted font-small-2">Phasellus vel elit volutpat, egestas urna a.</p>
+				                </td>
+			                    <td class="text-xs-center">
+				                	<span class="avatar avatar-busy">
+				                		<img src="../../../app-assets/images/portrait/small/avatar-s-10.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="Joe Doe"><i class=""></i>
+				                	</span>
+				                </td>
+				                <td><span class="tag tag-default tag-danger">Reopen</span></td>
+				                <td>
+				                	<select class="form-control" tabindex="-1" aria-hidden="true">
+				                		<option value="0">Show stopper</option>
+				                		<option value="1" selected>Critical</option>
+				                		<option value="2">Major</option>
+				                		<option value="3">Minor</option>
+				                	</select>
+				                </td>
+				                <td>
+				                	<fieldset class="form-group position-relative has-icon-left">
+			                            <div>
+			                                <i class="icon-calendar5"></i>
+			                            	<input type="text" class="form-control width-100 datepicker-default no-border px-1 pt-0" id="date-picker-8" placeholder="Icon Left, Default Input" value="28 July, 16">
+			                            </div>
+			                        </fieldset>
+			                    </td>
+				                <td>
+				                	<span class="dropdown">
+				                        <button id="btnSearchDrop9" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-primary dropdown-toggle dropdown-menu-right"><i class="icon-cog3"></i></button>
+				                        <span aria-labelledby="btnSearchDrop9" class="dropdown-menu mt-1 dropdown-menu-right">
+				                            <a href="#" class="dropdown-item"><i class="icon-eye6"></i> Open Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-pen3"></i> Edit Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-check2"></i> Complete Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-outbox"></i> Assign to</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-trash4"></i> Delete Bug</a>
+				                        </span>
+				                    </span>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td><a href="#" class="text-bold-600">#850</a></td>
+				                <td>
+				                	<a href="#" class="text-bold-600">Google map reset location</a>
+				                	<p class="text-muted font-small-2">Phasellus vel elit volutpat, egestas urna a.</p>
+				                </td>
+			                    <td class="text-xs-center">
+				                	<span class="avatar avatar-busy">
+				                		<img src="../../../app-assets/images/portrait/small/avatar-s-11.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="Joe Doe"><i class=""></i>
+				                	</span>
+				                </td>
+				                <td><span class="tag tag-default tag-warning">Open</span></td>
+				                <td>
+				                	<select class="form-control" tabindex="-1" aria-hidden="true">
+				                		<option value="0">Show stopper</option>
+				                		<option value="1">Critical</option>
+				                		<option value="2" selected>Major</option>
+				                		<option value="3">Minor</option>
+				                	</select>
+				                </td>
+				                <td>
+				                	<fieldset class="form-group position-relative has-icon-left">
+			                            <div>
+			                                <i class="icon-calendar5"></i>
+			                            	<input type="text" class="form-control width-100 datepicker-default no-border px-1 pt-0" id="date-picker-9" placeholder="Icon Left, Default Input" value="25 November, 16">
+			                            </div>
+			                        </fieldset>
+			                    </td>
+				                <td>
+				                	<span class="dropdown">
+				                        <button id="btnSearchDrop10" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-primary dropdown-toggle dropdown-menu-right"><i class="icon-cog3"></i></button>
+				                        <span aria-labelledby="btnSearchDrop10" class="dropdown-menu mt-1 dropdown-menu-right">
+				                            <a href="#" class="dropdown-item"><i class="icon-eye6"></i> Open Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-pen3"></i> Edit Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-check2"></i> Complete Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-outbox"></i> Assign to</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-trash4"></i> Delete Bug</a>
+				                        </span>
+				                    </span>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td><a href="#" class="text-bold-600">#550</a></td>
+				                <td>
+				                	<a href="#" class="text-bold-600">jQuery drag and drop integration issue</a>
+				                	<p class="text-muted font-small-2">Phasellus vel elit volutpat, egestas urna a.</p>
+				                </td>
+			                    <td class="text-xs-center">
+				                	<span class="avatar avatar-busy">
+				                		<img src="../../../app-assets/images/portrait/small/avatar-s-12.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="Joe Doe"><i class=""></i>
+				                	</span>
+				                </td>
+				                <td><span class="tag tag-default tag-info">In Progress</span></td>
+				                <td>
+				                	<select class="form-control" tabindex="-1" aria-hidden="true">
+				                		<option value="0">Show stopper</option>
+				                		<option value="1" selected>Critical</option>
+				                		<option value="2">Major</option>
+				                		<option value="3">Minor</option>
+				                	</select>
+				                </td>
+				                <td>
+				                	<fieldset class="form-group position-relative has-icon-left">
+			                            <div>
+			                                <i class="icon-calendar5"></i>
+			                            	<input type="text" class="form-control width-100 datepicker-default no-border px-1 pt-0" id="date-picker-10" placeholder="Icon Left, Default Input" value="25 November, 16">
+			                            </div>
+			                        </fieldset>
+			                    </td>
+				                <td>
+				                	<span class="dropdown">
+				                        <button id="btnSearchDrop11" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-primary dropdown-toggle dropdown-menu-right"><i class="icon-cog3"></i></button>
+				                        <span aria-labelledby="btnSearchDrop11" class="dropdown-menu mt-1 dropdown-menu-right">
+				                            <a href="#" class="dropdown-item"><i class="icon-eye6"></i> Open Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-pen3"></i> Edit Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-check2"></i> Complete Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-outbox"></i> Assign to</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-trash4"></i> Delete Bug</a>
+				                        </span>
+				                    </span>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td><a href="#" class="text-bold-600">#425</a></td>
+				                <td>
+				                	<a href="#" class="text-bold-600">DataTable inline editable issue</a>
+				                	<p class="text-muted font-small-2">Phasellus vel elit volutpat, egestas urna a.</p>
+				                </td>
+			                    <td class="text-xs-center">
+				                	<span class="avatar avatar-busy">
+				                		<img src="../../../app-assets/images/portrait/small/avatar-s-14.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="Joe Doe"><i class=""></i>
+				                	</span>
+				                </td>
+				                <td><span class="tag tag-default tag-danger">Reopen</span></td>
+				                <td>
+				                	<select class="form-control" tabindex="-1" aria-hidden="true">
+				                		<option value="0" selected>Show stopper</option>
+				                		<option value="1">Critical</option>
+				                		<option value="2">Major</option>
+				                		<option value="3">Minor</option>
+				                	</select>
+				                </td>
+				                <td>
+				                	<fieldset class="form-group position-relative has-icon-left">
+			                            <div>
+			                                <i class="icon-calendar5"></i>
+			                            	<input type="text" class="form-control width-100 datepicker-default no-border px-1 pt-0" id="date-picker-11" placeholder="Icon Left, Default Input" value="14 November, 16">
+			                            </div>
+			                        </fieldset>
+			                    </td>
+				                <td>
+				                	<span class="dropdown">
+				                        <button id="btnSearchDrop12" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-primary dropdown-toggle dropdown-menu-right"><i class="icon-cog3"></i></button>
+				                        <span aria-labelledby="btnSearchDrop12" class="dropdown-menu mt-1 dropdown-menu-right">
+				                            <a href="#" class="dropdown-item"><i class="icon-eye6"></i> Open Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-pen3"></i> Edit Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-check2"></i> Complete Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-outbox"></i> Assign to</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-trash4"></i> Delete Bug</a>
+				                        </span>
+				                    </span>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td><a href="#" class="text-bold-600">#526</a></td>
+				                <td>
+				                	<a href="#" class="text-bold-600">Vertical menu issue on iPad</a>
+				                	<p class="text-muted font-small-2">Phasellus vel elit volutpat, egestas urna a.</p>
+				                </td>
+			                    <td class="text-xs-center">
+				                	<span class="avatar avatar-busy">
+				                		<img src="../../../app-assets/images/portrait/small/avatar-s-3.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="John Doe"><i class=""></i>
+				                	</span>
+				                </td>
+				                <td><span class="tag tag-default tag-info">In Progress</span></td>
+				                <td>
+				                	<select class="form-control" tabindex="-1" aria-hidden="true">
+				                		<option value="0">Show stopper</option>
+				                		<option value="1">Critical</option>
+				                		<option value="0" selected>Major</option>
+				                		<option value="2">Minor</option>
+				                	</select>
+				                </td>
+				                <td>
+				                	<fieldset class="form-group position-relative has-icon-left">
+			                            <div>
+			                                <i class="icon-calendar5"></i>
+			                            	<input type="text" class="form-control width-100 datepicker-default no-border px-1 pt-0" id="date-picker-12" placeholder="Icon Left, Default Input" value="22 August, 16">
+			                            </div>
+			                        </fieldset>
+			                    </td>
+				                <td>
+				                	<span class="dropdown">
+				                        <button id="btnSearchDrop13" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-primary dropdown-toggle dropdown-menu-right"><i class="icon-cog3"></i></button>
+				                        <span aria-labelledby="btnSearchDrop13" class="dropdown-menu mt-1 dropdown-menu-right">
+				                            <a href="#" class="dropdown-item"><i class="icon-eye6"></i> Open Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-pen3"></i> Edit Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-check2"></i> Complete Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-outbox"></i> Assign to</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-trash4"></i> Delete Bug</a>
+				                        </span>
+				                    </span>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td><a href="#" class="text-bold-600">#995</a></td>
+				                <td>
+				                	<a href="#" class="text-bold-600">Progress bar animation improvement</a>
+				                	<p class="text-muted font-small-2">Phasellus vel elit volutpat, egestas urna a.</p>
+				                </td>
+			                    <td class="text-xs-center">
+				                	<span class="avatar avatar-busy">
+				                		<img src="../../../app-assets/images/portrait/small/avatar-s-4.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="Amy Doe"><i class=""></i>
+				                	</span>
+				                </td>
+				                <td><span class="tag tag-default tag-warning">Open</span></td>
+				                <td>
+				                	<select class="form-control" tabindex="-1" aria-hidden="true">
+				                		<option value="0">Show stopper</option>
+				                		<option value="1" selected>Critical</option>
+				                		<option value="0">Major</option>
+				                		<option value="2">Minor</option>
+				                	</select>
+				                </td>
+				                <td>
+				                	<fieldset class="form-group position-relative has-icon-left">
+			                            <div>
+			                                <i class="icon-calendar5"></i>
+			                            	<input type="text" class="form-control width-100 datepicker-default no-border px-1 pt-0" id="date-picker-13" placeholder="Icon Left, Default Input" value="12 August, 16">
+			                            </div>
+			                        </fieldset>
+			                    </td>
+				                <td>
+				                	<span class="dropdown">
+				                        <button id="btnSearchDrop14" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-primary dropdown-toggle dropdown-menu-right"><i class="icon-cog3"></i></button>
+				                        <span aria-labelledby="btnSearchDrop14" class="dropdown-menu mt-1 dropdown-menu-right">
+				                            <a href="#" class="dropdown-item"><i class="icon-eye6"></i> Open Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-pen3"></i> Edit Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-check2"></i> Complete Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-outbox"></i> Assign to</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-trash4"></i> Delete Bug</a>
+				                        </span>
+				                    </span>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td><a href="#" class="text-bold-600">#992</a></td>
+				                <td>
+				                	<a href="#" class="text-bold-600">Authentication API security issue</a>
+				                	<p class="text-muted font-small-2">Phasellus vel elit volutpat, egestas urna a.</p>
+				                </td>
+			                    <td class="text-xs-center">
+				                	<span class="avatar avatar-busy">
+				                		<img src="../../../app-assets/images/portrait/small/avatar-s-5.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="Joe Doe"><i class=""></i>
+				                	</span>
+				                </td>
+				                <td><span class="tag tag-default tag-danger">Reopen</span></td>
+				                <td>
+				                	<select class="form-control" tabindex="-1" aria-hidden="true">
+				                		<option value="0" selected>Show stopper</option>
+				                		<option value="1">Critical</option>
+				                		<option value="0">Major</option>
+				                		<option value="2">Minor</option>
+				                	</select>
+				                </td>
+				                <td>
+				                	<fieldset class="form-group position-relative has-icon-left">
+			                            <div>
+			                                <i class="icon-calendar5"></i>
+			                            	<input type="text" class="form-control width-100 datepicker-default no-border px-1 pt-0" id="date-picker-14" placeholder="Icon Left, Default Input" value="12 August, 16">
+			                            </div>
+			                        </fieldset>
+			                    </td>
+				                <td>
+				                	<span class="dropdown">
+				                        <button id="btnSearchDrop15" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-primary dropdown-toggle dropdown-menu-right"><i class="icon-cog3"></i></button>
+				                        <span aria-labelledby="btnSearchDrop15" class="dropdown-menu mt-1 dropdown-menu-right">
+				                            <a href="#" class="dropdown-item"><i class="icon-eye6"></i> Open Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-pen3"></i> Edit Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-check2"></i> Complete Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-outbox"></i> Assign to</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-trash4"></i> Delete Bug</a>
+				                        </span>
+				                    </span>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td><a href="#" class="text-bold-600">#956</a></td>
+				                <td>
+				                	<a href="#" class="text-bold-600">Project page chart issue</a>
+				                	<p class="text-muted font-small-2">Phasellus vel elit volutpat, egestas urna a.</p>
+				                </td>
+			                    <td class="text-xs-center">
+				                	<span class="avatar avatar-busy">
+				                		<img src="../../../app-assets/images/portrait/small/avatar-s-16.png" alt="avatar" data-toggle="tooltip" data-placement="right" title="Joe Doe"><i class=""></i>
+				                	</span>
+				                </td>
+				                <td><span class="tag tag-default tag-info">In Progress</span></td>
+				                <td>
+				                	<select class="form-control" tabindex="-1" aria-hidden="true">
+				                		<option value="0">Show stopper</option>
+				                		<option value="1">Critical</option>
+				                		<option value="0">Major</option>
+				                		<option value="2" selected>Minor</option>
+				                	</select>
+				                </td>
+				                <td>
+				                	<fieldset class="form-group position-relative has-icon-left">
+			                            <div>
+			                                <i class="icon-calendar5"></i>
+			                            	<input type="text" class="form-control width-100 datepicker-default no-border px-1 pt-0" id="date-picker-15" placeholder="Icon Left, Default Input" value="25 Oct, 16">
+			                            </div>
+			                        </fieldset>
+			                    </td>
+				                <td>
+				                	<span class="dropdown">
+				                        <button id="btnSearchDrop16" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-primary dropdown-toggle dropdown-menu-right"><i class="icon-cog3"></i></button>
+				                        <span aria-labelledby="btnSearchDrop16" class="dropdown-menu mt-1 dropdown-menu-right">
+				                            <a href="#" class="dropdown-item"><i class="icon-eye6"></i> Open Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-pen3"></i> Edit Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-check2"></i> Complete Bug</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-outbox"></i> Assign to</a>
+				                            <a href="#" class="dropdown-item"><i class="icon-trash4"></i> Delete Bug</a>
+				                        </span>
+				                    </span>
+				                </td>
+				            </tr>
+				        </tbody>
+				        <tfoot>
+				            <tr>
+				                <th>ID</th>
+				                <th>Bug</th>
+				                <th>Asignee</th>
+				                <th>Due</th>
+				                <th>Status</th>
+				                <th>Severity</th>
+				                <th>Actions</th>
+				            </tr>
+				        </tfoot>
+				    </table>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,17 @@
+.content-header-left.col-md-6.col-xs-12
+  h2.content-header-title.mb-0 #{pageTitle}
+  .row.breadcrumbs-top
+    block breadcrumbs
+.content-header-right.text-md-right.col-md-6.col-xs-12
+  .form-group
+  // Round Outline Icon Buttons
+  button.btn-icon.btn.btn-secondary.btn-round(type='button')
+    i.icon-bell4
+  button.btn-icon.btn.btn-secondary.btn-round(type='button')
+    i.icon-help2
+  button.btn-icon.btn.btn-secondary.btn-round(type='button')
+    i.icon-cog3
+
+.content-header-lead.col-xs-12.mt-2
+  p.lead
+    | #{description}

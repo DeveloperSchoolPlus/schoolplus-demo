@@ -1,0 +1,43 @@
+//- =========================================================================================
+	File Name: form-select-box-it.jade
+	Description: Modular and light-weight selection library.
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	========================================================================================== 
+
+block pageVars
+	- var pageTitle = "Select Box It"
+	- var pageSubTitle = " SelectBoxIt just works."
+	- var description  = "SelectBoxIt allows you to replace ugly and hard to use HTML select boxes with gorgeous and feature rich drop downs."
+	- var activeMenu = "form-select-box-it"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Form Components"}, {name:"Select Box It "}])
+
+
+
+//- Include page content in page block
+append content
+	include ../contents/form-select-box-it.html
+
+append vendorcss
+	//- SelectBoxIt CSS
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/forms/selects/jquery.selectBoxIt.css')
+
+append pagecss
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/css#{rtl}/plugins/forms/selectBoxIt/selectBoxIt.css')
+
+append vendorjs
+	//- jQuery UI JS
+	script(src='../../../app-assets/js/core/libraries/jquery_ui/jquery-ui.min.js', type='text/javascript')
+	//- Select Box It JS
+	script(src='../../../app-assets/vendors/js/forms/select/jquery.selectBoxIt.min.js', type='text/javascript')
+
+append pagejs
+	//- Template JS for SelectBoxIt
+	script(src='../../../app-assets/js/scripts/forms/select/form-selectBoxIt.js', type='text/javascript')

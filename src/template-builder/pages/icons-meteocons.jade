@@ -1,0 +1,24 @@
+//- =========================================================================================
+	File Name: icons-meteocons.jade
+	Description: Meteocons
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================================
+
+block pageVars
+	- var pageTitle = "Meteocons"
+	- var activeMenu = "icons-meteocons"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"}, {name:"Icons"}, {name:"Meteocons"}])
+
+
+
+//- Include page content in page block
+append content
+	include ../contents/icons-meteocons.html

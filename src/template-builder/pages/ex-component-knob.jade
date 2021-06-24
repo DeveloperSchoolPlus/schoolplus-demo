@@ -1,0 +1,45 @@
+//- =========================================================================================
+	File Name: ex-component-knob.jade
+	Description: Nice, downward compatible, touchable, jQuery dial
+	----------------------------------------------------------------------------------------
+	Item Name: Robust - Responsive Admin Template
+	Version: 1.2
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+	==========================================================================================-//
+
+block pageVars
+	- var pageTitle    = "Knob"
+	- var pageSubTitle = "Knob input jQuery plugin"
+	- var description  = "Nice, downward compatible, touchable, jQuery dial."
+	- var activeMenu   = "ex-component-knob"
+
+extends template
+
+append breadcrumbs
+	+breadcrumbs([{url:"index.html",name:"Home"},{url:"#",name:"Extra Components"}, {name:"Knob"}])
+
+
+
+//- Include page content in page block
+append content
+	include ../contents/ex-component-knob.html
+
+//- Vendor CSS
+//------------------------------
+//- Add vendor specific CSS
+append vendorcss
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/extensions/offline/themes/offline-theme-slide.css')
+	link(rel='stylesheet', type='text/css', href='../../../app-assets/vendors/css/extensions/offline/themes/offline-language-english.css')
+
+//- Vendor JS
+//------------------------------
+//- Add vendor specific JS
+append vendorjs
+	script(src='../../../app-assets/vendors/js/extensions/jquery.knob.min.js', type='text/javascript')
+
+//- Page JS
+//------------------------------
+//- Add custom page specific JS
+append pagejs
+	script(src='../../../app-assets/js/scripts/extensions/knob.js', type='text/javascript')

@@ -1,0 +1,58 @@
+block navbarMenuConfig
+
+- var dashLink = "../../../html/"+ useDirection +"/"+ useLayout +"/"+ "index.html"
+
+// Horizontal navigation
+.header-navbar.navbar.navbar-horizontal(class="#{menuType} #{menuColor}", class=(menuFlipped == true ? 'navbar-flipped' : ''), class=(menuWithoutDDArrow == true ? 'navbar-without-dd-arrow' : ''), class=(menuIconRight == true ? 'navbar-icon-right' : ''), class=(menuBorder == true ? 'navbar-bordered' : ''), class=(menuShadow == true ? 'navbar-shadow' : '') , role='navigation' data-menu="menu-wrapper")
+
+  // Horizontal menu content
+  .navbar-container.main-menu-content(data-menu="menu-container", class= (centerLayout == true ? 'container center-layout' : ''))
+    // include ../../../includes/mixins
+    +horizontalMenu([
+
+      //- Dashbaord
+      {url:dashLink,name:"Dashboard",slug:"dashboard", icon:"icon-home3", i18n:"nav.dash.main"},
+      //- Dashbaord End
+
+      //- Starter Kit start
+      {url:"#", name:"Starter kit", slug:"", i18n:"nav.starter_kit.main", icon:"icon-folder4", dropdown:"1",
+        //- Starter Kit Submenu
+        submenu:[
+          {url:"horizontal-layout-1-column.html", name:"1 column", slug:"1-column", i18n:"nav.starter_kit.1_column"},
+          {url:"#", name:"Content Det. Sidebar", slug:"", i18n:"nav.starter_kit.3_columns_detached.main",
+            submenu:[
+              {url:"layout-content-detached-left-sidebar.html", name:"Detached left sidebar", slug:"content-detached-left-sidebar", i18n:"nav.starter_kit.3_columns_detached.3_columns_detached_left_sidebar"},
+              {url:"layout-content-detached-left-sticky-sidebar.html", name:"Detached sticky left sidebar", slug:"content-detached-left-sticky-sidebar", i18n:"nav.starter_kit.3_columns_detached.3_columns_detached_sticky_left_sidebar"},
+              {url:"layout-content-detached-right-sidebar.html", name:"Detached right sidebar", slug:"content-detached-right-sidebar", i18n:"nav.starter_kit.3_columns_detached.3_columns_detached_right_sidebar"},
+              {url:"layout-content-detached-right-sticky-sidebar.html", name:"Detached sticky right sidebar", slug:"content-detached-right-sticky-sidebar", i18n:"nav.starter_kit.3_columns_detached.3_columns_detached_sticky_right_sidebar"},
+            ]
+          },
+          {divider:"1"},
+          {url:"layout-fixed-navigation.html",name:"Fixed navigation",slug:"fixed-navigation", i18n:"nav.starter_kit.fixed_navigation"},
+          {divider:"1"},
+          {url:"layout-fixed.html",name:"Fixed layout",slug:"fixed", i18n:"nav.starter_kit.fixed_layout"},
+          {url:"layout-boxed.html",name:"Boxed layout",slug:"boxed", i18n:"nav.starter_kit.boxed_layout"},
+          {url:"layout-static.html",name:"Static layout",slug:"static", i18n:"nav.starter_kit.static_layout"},
+          {divider:"1"},
+          {url:"layout-light.html",name:"Light layout",slug:"light", i18n:"nav.starter_kit.light_layout"},
+          {url:"layout-dark.html",name:"Dark layout",slug:"dark", i18n:"nav.starter_kit.dark_layout"},
+          {url:"layout-semi-dark.html",name:"Semi dark layout",slug:"semi-dark", i18n:"nav.starter_kit.semi_dark_layout"},
+        ]
+      },
+      //- Starter Kit Ends
+
+      //- Changelog
+      {url:"changelog.html" ,name:"Changelog" ,slug:"changelog" ,label:"1.2.2", icon:"icon-copy", labelcustom: "tag tag-glow tag-pill tag-default tag-danger", i18n:"nav.changelog.main"},
+
+      //- Support
+      {url:"#",name:"Support",slug:"#",icon:"icon-help2", i18n:"nav.category.support", dropdown:"1",
+        submenu:[
+          {url:"http://support.pixinvent.com/",name:"Raise Support",slug:"support-raise-support", i18n:"nav.support_raise_support.main"},
+          {url:"https://pixinvent.com/bootstrap-admin-template/robust/documentation",name:"Documentation",slug:"documentation", i18n:"nav.support_documentation.main"},
+        ]
+      },
+      //- End Support
+
+    ])
+  // /horizontal menu content
+// Horizontal navigation
