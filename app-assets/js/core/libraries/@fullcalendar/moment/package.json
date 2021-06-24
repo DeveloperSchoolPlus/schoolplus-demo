@@ -1,0 +1,63 @@
+{
+  "_from": "@fullcalendar/moment",
+  "_id": "@fullcalendar/moment@4.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-jJMwy5DGsfQcdS18DnA/pDoBUjaQvWWvn6/zq/Dnp9hhpxgb0BYtZeKfZhaypEOfW9c/iEd9CVyuYydBaDJE8Q==",
+  "_location": "/@fullcalendar/moment",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@fullcalendar/moment",
+    "name": "@fullcalendar/moment",
+    "escapedName": "@fullcalendar%2fmoment",
+    "scope": "@fullcalendar",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@fullcalendar/moment/-/moment-4.2.0.tgz",
+  "_shasum": "5c3a90d05c36678b7aff812ba0de75639ea8217f",
+  "_spec": "@fullcalendar/moment",
+  "_where": "C:\\node_modules",
+  "author": {
+    "name": "Adam Shaw",
+    "email": "arshaw@arshaw.com",
+    "url": "http://arshaw.com/"
+  },
+  "bugs": {
+    "url": "https://fullcalendar.io/reporting-bugs"
+  },
+  "bundleDependencies": false,
+  "copyright": "2019 Adam Shaw",
+  "deprecated": false,
+  "description": "A connector to the MomentJS date library",
+  "docs": "https://fullcalendar.io/docs/moment-plugins",
+  "homepage": "https://fullcalendar.io/",
+  "keywords": [
+    "calendar",
+    "event",
+    "full-sized"
+  ],
+  "license": "MIT",
+  "main": "main.js",
+  "name": "@fullcalendar/moment",
+  "peerDependencies": {
+    "moment": "^2.24.0",
+    "@fullcalendar/core": "~4.2.0"
+  },
+  "releaseDate": "2019-06-02",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullcalendar/fullcalendar.git",
+    "homepage": "https://github.com/fullcalendar/fullcalendar"
+  },
+  "title": "FullCalendar Moment Plugin",
+  "types": "main.d.ts",
+  "unpkg": "main.min.js",
+  "version": "4.2.0"
+}

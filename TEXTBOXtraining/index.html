@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>TEXTBOX School+</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>TEXTBOX SCHOOL+</title>
+
+  <meta name="robots" content="noindex">
+
+  <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css'>
+
+</head>
+
+<body>
+<div ng-app="textAngularTest" ng-controller="wysiwygeditor" class="container app">
+  <h3>TextBOX</h3>
+  <div text-angular="text-angular" name="htmlcontent" ng-model="htmlcontent" ta-disabled='disabled'></div>
+  <h3>HTML BRUT</h3>
+  <textarea ng-model="htmlcontent" style="width: 100%"></textarea>
+  <div ta-bind ng-model="data.htmlcontent"></div>
+  <h3>Ecriture dans la page</h3>
+  <div ng-bind-html="htmlcontent"></div>
+  
+  <button type="button" ng-click="htmlcontent = orightml">Effacer et recommencer</button>
+</div>
+<!-- <script src='../app-assets/js/scripts/pages/angular.min.js'></script> -->
+<script src='../app-assets/js/scripts/pages/angular.min.js'></script>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.5.0/textAngular-rangy.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.5.0/textAngular-sanitize.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.5.0/textAngular.min.js'></script>
+<!-- <script src='../app-assets/js/scripts/pages/textAngular-rangy.min.js'></script>
+<script src='../app-assets/js/scripts/pages/textAngular-sanitize.min.js'></script>
+<script src='../app-assets/js/scripts/pages/textAngular.min.js'></script> -->
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

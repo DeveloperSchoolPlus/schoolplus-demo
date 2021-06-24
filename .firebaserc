@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "schoolplus-dev-e8a2d",
+    "prod": "schoolplus-prod"
+  }
+}
